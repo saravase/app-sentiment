@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Predict</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/predict.css')}}">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="result-header">
+				Sentiment Analysis Result
+			</div>
+		</div>
+	</header>
+	<p>
+		Result for comment
+	</p>
+	<div class="results">
+		{% if prediction == 1 %}
+		<h2 class="negative">Negative</h2>
+		{% elif prediction == 0 %}
+		<h2 class="positive">Positive</h2>
+		{% endif %}
+	</div>
+	<a href=".."><input type="submit" value="Go Back"></a>
+</body>
+</html>
