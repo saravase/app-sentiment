@@ -29,6 +29,16 @@ run: locate jenkins
 run: docker pull gitlab/gitlab-ce
 run: docker run -d -p 443:443 -p 81:81 -p 22:22 --name gitlab gitlab/gitlab-ce
 
+run : sudo su  - root
+run : docker pull images
+run : docker build app-sentiment:v1 .
+run : docker run -p 4000:5000 -t --name app app-sentiment:v1
+run : docker images ls
 run : docker ps -a
 run : docker start contaier-id 
+run : docker stop ontainer-id
+run : docker image rm id
+run : docker rm id
+run : docker logs id
+run : docker exec -it app /bin/sh
 

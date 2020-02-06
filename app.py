@@ -1,8 +1,6 @@
 from flask import Flask, render_template, url_for, request
 import pandas as pd
 import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
 import re
 import string
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -83,5 +81,5 @@ def predict():
 	return render_template('predict.html', prediction=my_prediction)
 
 if __name__ == '__main__':
-	app.run(port=4000)
-z
+	app.run(host='0.0.0.0', port=4000)
+

@@ -10,6 +10,6 @@ RUN python -m nltk.downloader punkt
 
 EXPOSE 4000
 
-ENTRYPOINT ['python']
+ENTRYPOINT ["python"]
 
-CMD ['app.py']
+CMD ["app.py"]
